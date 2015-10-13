@@ -28,5 +28,5 @@ if __name__ == "__main__":
     c = csv.reader(sys.stdin)
     l = list(create_header(c))
 
-    print("const static float molar_masses[] = { " + ", ".join(l) + " };")
-    print("const static int MM_COUNT = " + format(len(l)) + ";")
+    print("const static float molar_masses[] = { %s };" % (", ".join(l),))
+    print("const static int MM_COUNT = %d;" % (len(l),))
